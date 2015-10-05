@@ -1,4 +1,4 @@
-# pt-flickr-feed
+# toyapp-flickr-feed
 
 This is a toy project about a flickr feed reader.
  
