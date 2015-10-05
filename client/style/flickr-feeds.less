@@ -1,0 +1,39 @@
+@import "flickr-feeds-config";
+@import "flicker-feeds-list";
+@import "flickr-feeds-components";
+@import "flickr-feeds-utils";
+@import "flickr-feeds-details";
+
+body {
+  padding: 25px;
+  font-family: Ubuntu, sans-serif;
+}
+
+a, a:visited, {
+  color: @color-primary-4;
+  text-decoration: none;
+}
+
+a:hover {
+  color: @color-primary-4;
+  text-decoration: underline;
+}
+
+#head {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #373737;
+  z-index: 2000;
+
+  h1 {
+    color: white;
+    float: right;
+    margin-right: 30px;
+  }
+}
+
+#content {
+  margin-top: 5em;
+}

@@ -1,0 +1,92 @@
+@import "flickr-feeds-config";
+
+@body-padding: 20px;
+
+.feed-detail {
+  position: relative;
+
+  .feed-detail-head {
+    position: relative;
+
+    clear: both;
+
+    background-color: @color-primary-1;
+    margin-bottom: 10px;
+    padding: 10px;
+
+    .feed-back {
+      float: right;
+      margin-top: @body-padding / 2;
+      margin-right: @body-padding / 2;
+    }
+
+    .feed-blank {
+      margin-left: 1em;
+      margin-right: 1em;
+    }
+  }
+
+  .feed-detail-body {
+    position: relative;
+    background-color: @color-primary-5;
+    border: 1px solid @color-primary-4;
+
+    padding: @body-padding;
+
+    .feed-detail-thumb {
+      float: left;
+      width: max(@thumb-height, @thumb-width);
+      height: max(@thumb-height, @thumb-width);
+    }
+
+    .feed-detail-content {
+      min-height: max(@thumb-height, @thumb-width);
+      margin-left: max(@thumb-height, @thumb-width);
+      padding-left: @body-padding;
+
+      .feed-detail-content-body {
+        min-height: min(@thumb-height, @thumb-width);
+        clear: right;
+
+        .feed-description {
+          margin-bottom: 4em;
+        }
+      }
+
+      .feed-tags {
+        margin-right: @body-padding;
+      }
+    }
+  }
+}
+
+// Mobile
+@media (max-width: 600px), (max-device-width: 600px) {
+
+  .feed-detail .feed-detail-body {
+    .feed-detail-thumb {
+      display: block;
+      width: 100%;
+      height: max(@thumb-height, @thumb-width);
+      margin-bottom: @body-padding
+    }
+
+    .feed-detail-content {
+      clear: both;
+      margin-left: auto;
+      padding-left: 0;
+
+    }
+  }
+}
+
+// Mobile aspect-ratio 2
+@media (max-width: 600px) and (min-device-pixel-ratio: 2), (max-device-width: 600px) {
+  .feed-detail .feed-detail-body .feed-detail-thumb {
+    height: max(@thumb-height, @thumb-width) * 2;
+  }
+
+  .feed-back {
+    font-size: 2.5em;
+  }
+}

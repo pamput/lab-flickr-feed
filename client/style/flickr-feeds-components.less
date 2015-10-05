@@ -1,0 +1,45 @@
+@import "flickr-feeds-config";
+@import "flickr-feeds-utils";
+
+.feeds-thumb-container {
+  display: inline;
+  float: left;
+  width: 100%;
+  height: 100%;
+}
+
+.feed-thumb {
+  background: no-repeat center center;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+}
+
+.feed-thumb-crop {
+  background: no-repeat center center;
+  background-size: cover;
+}
+
+.feed-thumb-missing {
+  background-image: @thumb-missing;
+}
+
+.feed-author:extend(.ellipsis) {
+
+}
+
+.feed-publish-date {
+
+}
+
+.feed-search {
+  margin: 20px;
+}
+
+.feed-title:extend(.ellipsis)  {
+  font-size: 1.4em;
+  font-weight: bolder;
+  display: block;
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
+}
